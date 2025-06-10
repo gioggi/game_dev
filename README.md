@@ -98,10 +98,6 @@ The frontend is built with Vue.js and provides the user interface. Features:
 - Interactive game interface
 - State management with Vuex
 
-## API Documentation
-
-The API documentation is available at `/api/documentation` when running the application.
-
 ## Contributing
 
 1. Fork the repository
