@@ -45,8 +45,12 @@
           <p class="my-1 text-text-dark">Complexity: {{ project.complexity }}</p>
           <p class="my-1 text-text-dark">Value: €{{ project.value.toLocaleString() }}</p>
           <p class="my-1">Status: 
-            <span :class="project.assigned ? 'text-danger font-bold' : 'text-success font-bold'">
-              {{ project.assigned ? 'In Development' : 'Pending' }}
+            <span :class="{
+              'text-danger font-bold': project.assigned && !project.completed,
+              'text-success font-bold': !project.assigned && !project.completed,
+              'text-primary font-bold': project.completed
+            }">
+              {{ project.completed ? 'Completed' : (project.assigned ? 'In Development' : 'Pending') }}
             </span>
           </p>
         </Card>

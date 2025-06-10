@@ -115,7 +115,7 @@ export default {
       return this.developers.filter(dev => dev.busy)
     },
     pendingProjects() {
-      return this.$store.state.projects.filter(project => !project.assigned)
+      return this.$store.state.projects.filter(project => !project.assigned && !project.completed)
     }
   },
   methods: {
