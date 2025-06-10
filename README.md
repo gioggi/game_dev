@@ -22,7 +22,7 @@ APP_DEBUG=true
 APP_URL=http://localhost:8000
 
 DB_CONNECTION=mysql
-DB_HOST=mysql
+DB_HOST=db
 DB_PORT=3306
 DB_DATABASE=dev_game
 DB_USERNAME=dev_game
@@ -60,32 +60,6 @@ cp frontend/.env.example frontend/.env
 3. Start the Docker containers:
 ```bash
 docker compose up -d
-```
-
-4. Install backend dependencies:
-```bash
-docker compose exec keristo composer install
-```
-
-5. Generate application key:
-```bash
-docker compose exec keristo php artisan key:generate
-```
-
-6. Run database migrations:
-```bash
-docker compose exec keristo php artisan migrate
-```
-
-7. Install frontend dependencies:
-```bash
-cd frontend
-npm install
-```
-
-8. Start the frontend development server:
-```bash
-npm run dev
 ```
 
 ## Accessing the Application
