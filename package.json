@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "devDependencies": {
+    "laravel-echo-server": "^1.6.3"
+  }
+} 
